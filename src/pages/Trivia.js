@@ -22,20 +22,22 @@ const Trivia = ({ name, questions, score, setScore, setQuestions }) => {
   const handleShuffle = (options) => {
     return options.sort(() => Math.random() - 0.5);
   };
-
   return (
     <div className="quiz">
-      <span className="subtitle">Usuario: {name}</span>
+      <img  src="https://th.bing.com/th/id/R.8bdc3179a6454f565b114c37d99bc9f1?rik=Di%2fJvYEVQrCIuQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-6Tv3WHHCeZk%2fUckr77ufGII%2fAAAAAAAAAYw%2fq7vsX0AhBUU%2fs1600%2fQUIEN-QUIERE-SER-MILLONARIO.jpg&ehk=%2fq33H%2fyZ6cgGt955d9WSe9PvWArr4Ex0Z%2foPhQ68zls%3d&risl=&pid=ImgRaw&r=0" height="80px" width="80px"/>
 
       {questions ? (
         <>
           <div className="quizInfo">
-            <span>{questions[currQues].category}</span>
             <span>
-              {/* {questions[currQues].difficulty} */}
-              Score : {score}
+               {/* {questions[currQues].difficulty} */}
             </span>
           </div>
+              
+          <h6> Usuario: {name}</h6>
+          <h2> Tema : {questions[currQues].category} </h2>
+          <h2> Ganaste : $ {score}  </h2>
+          
           <Question
             currQues={currQues}
             setCurrQues={setCurrQues}

@@ -36,7 +36,7 @@ function App() {
               fetchQuestions={fetchQuestions}
             />
           </Route>
-          <Route path="/quiz">
+          <Route path="/Trivia">
             <Trivia
               name={name}
               questions={questions}

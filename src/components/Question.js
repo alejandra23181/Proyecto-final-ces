@@ -27,13 +27,13 @@ const Question = ({
 
   const handleCheck = (i) => {
     setSelected(i);
-    if (i === correct) setScore(score + 1000);
+    if (i === correct) setScore(score + 100);
     setError(false);
   };
 
   const handleNext = () => {
     if (currQues > 8) {
-      history.push("/result");
+      history.push("/Final");
     } else if (selected) {
       setCurrQues(currQues + 1);
       setSelected();
@@ -45,12 +45,18 @@ const Question = ({
     setQuestions();
   };
 
+  const handleFin = () => {
+    setCurrQues(0);
+    setQuestions();
+    history.push("/Final");
+  };
+
   return (
     <div className="question">
-      <h1>Pregunta: {currQues + 1} :</h1>
+      <h1>Pregunta: {currQues + 1} </h1>
 
       <div className="singleQuestion">
-        <h2>{questions[currQues].question}</h2>
+        <h5>{questions[currQues].question}</h5>
         <div className="options">
           {error && <ErrorMessage>{error}</ErrorMessage>}
           {options &&
@@ -68,22 +74,21 @@ const Question = ({
         <div className="controls">
           <Button
             variant="contained"
-            color="secondary"
-            size="large"
-            style={{ width: 185 }}
-            href="/"
-            onClick={() => handleQuit()}
-          >
-            Volver al inicio
-          </Button>
-          <Button
-            variant="contained"
             color="primary"
             size="large"
-            style={{ width: 185 }}
+            style={{ width: 180 }}
             onClick={handleNext}
           >
             {currQues > 20 ? "Submit" : "Siguiente pregunta"}
+          </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            size="large"
+            style={{ width: 185 }}
+            onClick={handleFin}
+          >
+            Terminar partida
           </Button>
         </div>
       </div>

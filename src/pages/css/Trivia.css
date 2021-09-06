@@ -19,4 +19,12 @@
     text-transform: uppercase;
     margin: 10px;
   }
+
+  h6 {
+    color: purple;
+    font-weight: normal;
+    font-size: 35px;
+    font-family: "Comic Sans Ms";
+    text-transform: lowercase;
+  }
   
