@@ -74,21 +74,21 @@ const Question = ({
         <div className="controls">
           <Button
             variant="contained"
-            color="primary"
-            size="large"
-            style={{ width: 180 }}
-            onClick={handleNext}
-          >
-            {currQues > 20 ? "Submit" : "Siguiente pregunta"}
-          </Button>
-          <Button
-            variant="contained"
             color="secondary"
             size="large"
             style={{ width: 185 }}
             onClick={handleFin}
           >
             Terminar partida
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            style={{ width: 180 }}
+            onClick={handleNext}
+          >
+            {currQues > 20 ? "Submit" : "Siguiente pregunta"}
           </Button>
         </div>
       </div>
