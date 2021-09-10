@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Question from "../components/Question";
 import "./css/Trivia.css";
 
-const Trivia = ({ name, questions, score, setScore, setQuestions }) => {
+  const Trivia = ({ name, questions, score, setScore, setQuestions }) => {
   const [options, setOptions] = useState();
   const [currQues, setCurrQues] = useState(0);
 
@@ -32,8 +32,7 @@ const Trivia = ({ name, questions, score, setScore, setQuestions }) => {
             <span>
                {/* {questions[currQues].difficulty} */}
             </span>
-          </div>
-              
+          </div>   
           <h6> Usuario: {name}</h6>
           <h2> Tema : {questions[currQues].category} </h2>
           <h2> Ganaste : $ {score}  </h2>
