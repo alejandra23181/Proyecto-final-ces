@@ -21,8 +21,8 @@ const Question = ({
 
   const handleSelect = (i) => {
     if (selected === i && selected === correct) return "select";
-    else if (selected === i && selected !== correct) return "wrong";
-    else if (i === correct) return "select";
+    else if (selected === i && selected !== correct) return history.push("/Final");
+    else if (i === correct) return handleNext; 
   };
 
   const handleCheck = (i) => {
