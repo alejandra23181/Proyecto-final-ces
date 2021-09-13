@@ -36,14 +36,14 @@ const Inicio = ({ name, setName, fetchQuestions }) => {
           </center>
           <TextField
             style={{ marginBottom: 25 }}
-            label="Enter Your Name"
+            label="Ingrese su nombre"
             variant="outlined"
             color="secondary"
             onChange={(e) => setName(e.target.value)}
           />
           <TextField
             select
-            label="Select Category"
+            label="Seleccione una cátegoria"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             variant="outlined"
@@ -58,7 +58,7 @@ const Inicio = ({ name, setName, fetchQuestions }) => {
           </TextField>
           <TextField
             select
-            label="Select Difficulty"
+            label="Seleccione una dificultad"
             value={difficulty}
             onChange={(e) => setDifficulty(e.target.value)}
                         variant="outlined"
